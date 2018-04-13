@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.raty.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<script src="js/jquery.raty.js"></script>
+		<title>商品评价</title>
+	</head>
+	<body class="page fullpage">
+		<div class="wrapper">
+			<div class="main">
+				<!--header-->
+				<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+					<div class="am-header-left am-header-nav">
+						<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+				    </div>
+				    <h1 class="am-header-title">提交评价</h1>
+				</div>
+				<div class="evaluate topline">
+					<p class="f-14 c-666">您对本次配送服务的评价是:</p>
+					<div class="attitude">
+						<div class="attitude-name">
+							<img src="images/icon/icon-peisong.png"/>
+						</div>
+						<div class="attitude-choose">
+							<div class="attitude-item"><img src="images/icon/icon-dissatisfied.png"/><p>不满意</p></div>
+							<div class="attitude-item active"><img src="images/icon/icon-satisfied.png"/><p>满意</p></div>
+							<div class="attitude-item"><img src="images/icon/icon-surprised.png"/><p>惊喜</p></div>
+						</div>
+					</div>
+					<div class="tags">
+						<span class="btn-main btn-default radius">穿着制服</span>
+						<span class="btn-main-outline btn-default radius">配送上楼</span>
+					</div>
+				</div>
+				<!--raty-->
+				<div class="raty-wrap">
+					<div class="raty-item">
+						<div class="raty-title">
+							<div class="raty-pic">
+								<img src="images/static/148094230699648.jpg"/>
+							</div>
+							<div class="raty-name">
+								<div>
+									<p class="f-14 c-666">草莓盛宴</p>
+									<p class="f-12 c-999">Strawberry Festival</p>
+								</div>
+								<div class="raty-star">
+									<div class="targetKeep"></div>
+      								<div class="targetKeep-hint"></div>
+								</div>
+							</div>
+						</div>
+						<div class="tags">
+							<span class="btn-main btn-default radius">穿着制服</span>
+							<span class="btn-main-outline btn-default radius">配送上楼</span>
+						</div>
+						<textarea name="textarea" placeholder="还有什么别的想说的吗？您的评价对我们很重要。" class="textarea"></textarea>
+					</div>
+					<div class="raty-item">
+						<div class="raty-title">
+							<div class="raty-pic">
+								<img src="images/static/148094230699648.jpg"/>
+							</div>
+							<div class="raty-name">
+								<div>
+									<p class="f-14 c-666">草莓盛宴</p>
+									<p class="f-12 c-999">Strawberry Festival</p>
+								</div>
+								<div class="raty-star">
+									<div class="targetKeep"></div>
+      								<div class="targetKeep-hint"></div>
+								</div>
+							</div>
+						</div>
+						<div class="tags">
+							<span class="btn-main btn-default radius">穿着制服</span>
+							<span class="btn-main-outline btn-default radius">配送上楼</span>
+						</div>
+						<textarea name="textarea" placeholder="还有什么别的想说的吗？您的评价对我们很重要。" class="textarea"></textarea>
+					</div>
+					<div class="raty-item">
+						<div class="raty-title">
+							<div class="raty-pic">
+								<img src="images/static/148094230699648.jpg"/>
+							</div>
+							<div class="raty-name">
+								<div>
+									<p class="f-14 c-666">草莓盛宴</p>
+									<p class="f-12 c-999">Strawberry Festival</p>
+								</div>
+								<div class="raty-star">
+									<div class="targetKeep"></div>
+      								<div class="targetKeep-hint"></div>
+								</div>
+							</div>
+						</div>
+						<div class="tags">
+							<span class="btn-main btn-default radius">穿着制服</span>
+							<span class="btn-main-outline btn-default radius">配送上楼</span>
+						</div>
+						<textarea name="textarea" placeholder="还有什么别的想说的吗？您的评价对我们很重要。" class="textarea"></textarea>
+					</div>
+				</div>
+				
+			</div>
+			<div class="stickyfooter">
+				<a href="" class="btn-main btn-block radius">提交评价</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var targetKeep =$(".targetKeep"),
+				targetKeep_hint=$(".targetKeep-hint"),idx,idy;
+			for (var i=0;i<targetKeep.length;i++){
+				idx="raty"+i;
+				idy="targetKeep"+i;
+				targetKeep.eq(i).attr("id",idx);
+				targetKeep_hint.eq(i).attr("id",idy);
+				$("#"+idx).raty({
+				  target : '#'+idy,
+				  path  : 'images/icon/',
+				  starOff : 'icon-star.png',
+	  			  starOn  : 'icon-star-fill.png',
+				  targetKeep : true,
+				  hints: ['差', '一般', '满意', '很满意', '超赞']
+				});				
+			}			
+		</script>
+	</body>
+</html>

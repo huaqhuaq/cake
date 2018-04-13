@@ -44,45 +44,59 @@
 			</div>
 			<div class="cell widget">
 				<span class="f-14 c-666">请选择门店</span>
-				<span class="f-12 c-999 rtl" id="shop">无锡百盛店 某某 12345678910</span>
+				<span class="f-12 c-999" id="shop">无锡百盛店 某某 12345678910</span>
 			</div>
 		</div>
 		<div class="module">
 			<div class="cell widget">
 				<span class="f-14 c-666">请选择配送时间</span>
-				<span class="f-12 c-999 rtl" id="time">03-01 明天 12:00-13:00</span>
+				<span class="f-12 c-999" id="time">03-01 明天 12:00-13:00</span>
 			</div>
 		</div>
 		<div class="module">
-			<div class="cell">
+			<div class="cell switch">
 				<span class="f-14 c-666">匿名送达</span>
-				<span class="f-12 c-999">勾选此选项后我们将为您保密下单人信息</span>
+				<span class="f-12 c-999 switch-desc">勾选此选项后我们将为您保密下单人信息</span>
 				<input id="switch-size" type="checkbox" data-am-switch data-size="xs" data-off-text="" data-on-text="" data-inverse="true" checked>
 			</div>
 		</div>
 		<div class="module">
 			<div class="order-group">
+				<div class="am-padding-bottom-sm">
+					<p class="f-14 c-666">儿童节套餐</p>
+					<p class="f-12 c-999">柠檬奶油+草莓三角</p>
+				</div>
+				<div class="order-acount">
+					<p class="f-14 maincolor"><span class="f-12">￥</span>336</p>
+					<p class="f-12 c-999">x2</p>
+				</div>
+			</div>
+			<div class="order-group">
 				<div class="order-item">
 					<img src="images/static/147063367453942.jpg" class="order-pic radius"/>
 					<div class="order-info">
-						<p class="f-14 c-666">草莓盛宴</p>
-						<p class="f-12 c-999">Strawberry Festival</p>
-						<p class="f-12 c-999">规格: 2.0磅</p>
-						<p class="f-12 c-999">提供10份餐具</p>
+						<div>
+							<p class="f-14 c-666">草莓盛宴</p>
+							<p class="f-12 c-999">Strawberry Festival</p>
+						</div>
+						<div>
+							<p class="f-12 c-999">规格: 2.0磅</p>
+							<p class="f-12 c-999">巧克力牌：生日快乐</p>
+						</div>
 					</div>
 				</div>
 				<div class="order-acount">
 					<p class="f-14 maincolor"><span class="f-12">￥</span>336</p>
-					<p class="f-12 c-999">x1</p>
+					<p class="f-12 c-999">x2</p>
 				</div>
 			</div>
-			<div class="cell">
+			<div class="cell open">
 				<div class="add-card">
-					<p>添加巧克力牌</p>
-					<img src="images/icon/icon-slidedown.png" class="add-icon"/>
+					<span class="f-14 c-666">添加巧克力牌</span>
+					<img src="images/icon/icon-slideup.png" class="add-icon"/>
 				</div>
 				<div class="add-content">
-					<form action="" method="post">
+					<div class="container">
 						<div class="radiobtn lg">
 							<input type="radio" name="card" id="card01" value="" />
 							<label for="card01">生日快乐</label>
@@ -91,13 +105,109 @@
 							<input type="radio" name="card" id="card02" value="" />
 							<label for="card02">Happy Birthday</label>
 						</div>
-						<input type="text" value="" placeholder="或者您可以自定义内容，最多支持8个汉字"/>
-					</form>
+						<div class="am-margin-bottom-sm">
+							<input type="text" value="" maxlength="8" placeholder="或者您可以自定义内容，最多支持8个汉字" class="inputbox radius"/>
+						</div>
+						<div class="am-margin-bottom-sm">
+							<span class="f-12 c-666">自定义巧克力牌的颜色:</span>
+						    <div class="radiobox">
+						    	<input type="radio" name="color" id="color01" value="黑底白字" checked="checked" />
+						    	<label for="color01">黑底白字</label>
+						    </div>
+						    <div class="radiobox">
+						    	<input type="radio" name="color" id="color02" value="白底粉字" />
+						    	<label for="color02">白底粉字</label>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cell widget">
+				<span class="f-14 c-666">请选择优惠方式</span>
+			</div>
+		</div>
+		<div class="module">
+			<div class="cell widget">
+				<span class="f-14 c-666">请选择优惠方式配件</span>
+			</div>
+			<div class="cell open">
+				<div class="add-card">
+					<span class="f-14 c-666">备注</span>
+					<img src="images/icon/icon-slideup.png" class="add-icon"/>
+				</div>
+				<div class="add-content">
+					<div class="container">
+						<div class="am-margin-top-sm am-margin-bottom-sm">
+							<input type="text" value="" maxlength="8" placeholder="或者您可以自定义内容，最多支持8个汉字" class="inputbox radius"/>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="module">
+			<p class="f-14 c-666 am-padding-top-sm">请选择支付方式</p>
+			<div class="cell pay">
+				<span class="f-14 c-666 pay-name"><img src="images/icon/icon-pay-yue.png"/>余额支付</span>
+				<div class="radiobox">
+					<span class="c-12 c-666">可用余额</span>
+			    	<input type="radio" name="pay" id="pay01" value="余额支付" />
+			    	<label for="pay01"></label>
+			    </div>
+			</div>
+			<div class="cell pay">
+				<span class="f-14 c-666 pay-name"><img src="images/icon/icon-pay-wc.png"/>微信支付</span>
+				<div class="radiobox">
+			    	<input type="radio" name="pay" id="pay02" value="微信支付" />
+			    	<label for="pay02"></label>
+			    </div>
+			</div>
+			<div class="cell pay">
+				<span class="f-14 c-666 pay-name"><img src="images/icon/icon-pay-hz.png"/>华泽券兑换<img src="images/icon/icon-pay-coupon.png" class="am-margin-left-sm"/></span>
+				<div class="radiobox">
+			    	<input type="radio" name="pay" id="pay03" value="华泽券兑换" />
+			    	<label for="pay03"></label>
+			    </div>
+			</div>
+		</div>
+		<div class="module">
+			<div class="cell switch">
+				<span class="f-14 c-666">使用500积分抵扣5.0元</span>
+				<input id="switch-size" type="checkbox" data-am-switch data-size="xs" data-off-text="" data-on-text="" data-inverse="true" >
+			</div>
+		</div>
+		<div class="module">
+			<div class="order-price">
+				<p class="f-12"><span class="order-price-font c-666">商品金额</span><span class="order-price-num maincolor">¥822.0</span></p>
+				<p class="f-12"><span class="order-price-font c-666">优惠金额</span><span class="order-price-num maincolor">-¥20.0</span></p>
+				<p class="f-12"><span class="order-price-font c-666">配件</span><span class="order-price-num maincolor">¥20.0</span></p>
+				<p class="f-12"><img src="images/icon/icon-question.png" width="10" height="10"><span class="order-price-font c-666">运费</span><span class="order-price-num maincolor">¥0.0</span></p>
+				<p class="f-12"><span class="order-price-font c-666">应付金额</span><span class="order-price-num maincolor">¥822.0</span></p>
+			</div>
+		</div>
+		<div data-am-widget="navbar" class="am-navbar am-cf footer">
+			<ul class="am-navbar-nav am-cf am-avg-sm-2">
+				<li class="flex-1">
+					<p class="f-14 c-666 am-fl">实付金额:<span class="maincolor"><em class="f-12">￥</em>822</span></p>
+				</li>
+				<li class="footer-btn">
+					<a href="" class="btn-main btn-lg radius">确认支付</a>
+				</li>
+			</ul>
+		</div>
 		<script type="text/javascript">
-			$(".am-switch").addClass("am-fr");
+			$(".add-icon").each(function(){
+				var content = $(this).parent().next()
+				$(this).on("click",function(){
+					if(content.is(":visible")){
+						content.slideUp()
+						$(this).attr("src","images/icon/icon-slidedown.png")
+					}else{
+						content.slideDown()
+					    $(this).attr("src","images/icon/icon-slideup.png")
+					}
+				})
+			})
+			
 			var shopEl = document.getElementById('shop');
 			var shop = [
 				{

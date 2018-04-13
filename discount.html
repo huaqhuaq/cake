@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/amazeui.switch.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<script src="js/picker.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.switch.min.js" type="text/javascript"></script>
+		<title>选择优惠</title>
+	</head>
+	<body class="page fullpage">
+		
+		<div class="section">
+			<!--header-->
+			<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+				<div class="am-header-left am-header-nav">
+					<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+			    </div>
+			    <h1 class="am-header-title">选择优惠</h1>
+			</div>
+			<div class="module">
+				<div class="cell">
+					<div class="discount">
+						<div>
+							<p class="f-14 c-666">使用余额支付享受会员价</p>
+							<p class="f-12 c-999">账户余额:100.0 余额不足，<a href="" class="maincolor">点击充值</a></p>
+						</div>
+						<div class="radiobox">
+					    	<input type="radio" name="discount" id="discount01" value="余额支付" />
+					    	<label for="discount01"></label>
+					    </div>
+					</div>
+				</div>
+				<div class="cell open">
+					<div class="discount">
+						<div>
+							<p class="f-14 c-666">使用优惠券</p>
+							<p class="f-12 c-999">剩余可用优惠券:5张</p>
+						</div>
+						<div class="radiobox">
+					    	<input type="radio" name="discount" id="discount02" value="优惠券" class="couponCard" />
+					    	<label for="discount02"></label>
+					    </div>
+					</div>
+					<div class="coupon">
+						<div class="coupon-item">
+					    	<div class="coupon-price"><p class="f-32 maincolor"><span class="f-18">￥</span>12</p></div>
+							<div class="coupon-info">
+								<h4 class="f-16 maincolor">优糯蛋糕满减券</h4>
+								<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+								<p class="f-10 c-666">订单满188元使用</p>
+								<p class="f-10 c-666">仅限线上使用</p>
+							</div>
+					    </div>
+						<div class="coupon-item">
+					    	<div class="coupon-price"><p class="f-32 maincolor"><span class="f-18">￥</span>12</p></div>
+							<div class="coupon-info">
+								<h4 class="f-16 maincolor">优糯蛋糕满减券</h4>
+								<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+								<p class="f-10 c-666">订单满188元使用</p>
+								<p class="f-10 c-666">仅限线上使用</p>
+							</div>
+					    </div>
+					    <div class="coupon-item disabled">
+					    	<div class="coupon-price"><p class="f-32 maincolor"><span class="f-18">￥</span>12</p></div>
+							<div class="coupon-info">
+								<h4 class="f-16 maincolor">优糯蛋糕满减券</h4>
+								<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+								<p class="f-10 c-666 mismatch">订单满188元使用</p>
+								<p class="f-10 c-666">仅限线上使用</p>
+							</div>
+					    </div>
+					</div>
+				</div>
+				<div class="cell open">
+					<div class="discount">
+						<div>
+							<p class="f-14 c-666">磅卡/集团卡抵扣</p>
+							<p class="f-12 c-red">温馨提示:提货时必须带上对应磅卡</p>
+						</div>
+						<div class="radiobox">
+					    	<input type="radio" name="discount" id="discount03" value="磅卡" class="poundCard" />
+					    	<label for="discount03"></label>
+					    </div>
+					</div>
+					<div class="verify">
+						<div class="verify-form">
+							<div class="flex-2"><input type="tel" value="" placeholder="请输入10位卡号" class="inputbox radius"/></div>
+							<div class="flex-1"><input type="text" value="" placeholder="请输入密码" class="inputbox radius"/></div>
+							<div class="flex-1"><input type="submit"value="验证" class="btn-main btn-xl radius" id="verifybtn"/></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div data-am-widget="navbar" class="am-navbar am-cf footer">
+				<ul class="am-navbar-nav am-cf am-avg-sm-2">
+					<li class="flex-1">
+						<p class="f-14 c-666 am-fl">享受优惠:<span class="maincolor"><em class="f-12">-￥</em>20.00</span></p>
+					</li>
+					<li class="footer-btn">
+						<a href="" class="btn-main btn-lg radius">确认使用</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+			
+		
+		
+		
+		<script type="text/javascript">
+			$(".coupon-item.disabled").each(function(){
+				$(this).on("click",function(){
+					$(this).removeClass("active")
+				})
+			})
+			$(".coupon-item:not(.disabled)").each(function(){
+				$(this).on("click",function(){
+					$(this).siblings().removeClass("active")
+					$(this).addClass("active")
+				})
+			})
+			
+			$("input[name=discount]").on("change",function(){
+				if($(".couponCard").is(':checked')){
+					$(".coupon").slideDown()
+				}else{
+				    $(".coupon").slideUp()
+				}
+				if($(".poundCard").is(':checked')){
+					$(".verify").slideDown()
+				}else{
+				    $(".verify").slideUp()
+				}
+			})
+			$("#verifybtn").on("click",function(){
+				layer.open({
+					type: 1,
+				    content: '<div class="am-padding-lg am-cf"><img src="images/icon/icon-pass.png" width="60" height="60" class="am-fl"/> <div class="am-u-sm-8"> <h4 class="f-16 c-666">磅卡验证成功</h4> <div class="verify-info"> <p class="f-14 c-666">卡券类型:<span class="maincolor">优糯磅卡</span></p> <p class="f-14 c-666">可用金额:<span class="maincolor">¥188</span></p> </div> </div></div>',
+				    btn: ['确认使用', '取消'],
+				    style: 'position:fixed; top: 180px; left:0;right:0;margin:0 auto; width: 300px; height: 160px; padding:0; border:none;border-radius: 5px;',
+				    className :'verify-layer',
+				    shadeClose: false
+				});
+			})
+		</script>
+	</body>
+</html>
