@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<title>门店</title>
+	</head>
+	<body>
+		<!--top-->
+		<header class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+			<div class="am-header-left ">
+				<p class="f-16 c-666">全部门店<img src="images/icon/icon-down.png" width="12" class="am-margin-left-xs"></p>
+			</div>
+			<div class="am-header-right am-header-nav">
+				<p class="f-12 maincolor"><img src="images/icon/icon-addr.png" width="22" height="22"/>无锡</p>
+			</div>
+		</header>
+		
+		<div class="topline">
+			<div class="container">
+				<div class="shop">
+					<div class="shop-pic">
+						<img src="images/static/01a7f6fe77f17eeb73c33e99c8ee326553ce3bd0217c1-yW0snt@2x.png" class="shop-img"/>
+						<p class="f-16 c-white shop-name">无锡百盛店</p>
+						<p class="f-12 c-white shop-desc">无锡市梁溪区人民中路127号百盛B1层</p>
+					</div>
+					<p class="f-12 c-666 am-text-right">距离您<span class="maincolor">2.7</span>公里</p>
+				</div>
+				<div class="shop">
+					<div class="shop-pic">
+						<img src="images/static/df2e3af18006560753b129e8236213d6e6bfd1ef25578-zu6MLc@2x.png" class="shop-img"/>
+						<p class="f-16 c-white shop-name">无锡荟聚店</p>
+						<p class="f-12 c-white shop-desc">无锡市荟聚云林购物中心4楼电影院出口</p>
+					</div>
+					<p class="f-12 c-666 am-text-right">距离您<span class="maincolor">6.6</span>公里</p>
+				</div>
+				<div class="shop">
+					<div class="shop-pic">
+						<img src="images/static/4201543b7188605f67a6a5cc9a90c6290cafd90b178d5-N2T2ps@2x.png" class="shop-img"/>
+						<p class="f-16 c-white shop-name">无锡万象城店</p>
+						<p class="f-12 c-white shop-desc">无锡市滨湖区金石路88号万象城1-89号</p>
+					</div>
+					<p class="f-12 c-666 am-text-right">距离您<span class="maincolor">6.9</span>公里</p>
+				</div>
+				<div class="shop">
+					<div class="shop-pic">
+						<img src="images/static/34ddb4a68768a9a11f860883c9d1212974b44af82891b-cnyVYD@2x.png" class="shop-img"/>
+						<p class="f-16 c-white shop-name">苏州邻瑞店</p>
+						<p class="f-12 c-white shop-desc">无锡市梁溪区人民中路127号百盛B1层</p>
+					</div>
+					<p class="f-12 c-666 am-text-right">距离您<span class="maincolor">2.7</span>公里</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--mask-->
+		<div class="mask">
+			<div class="tagwarp">
+				<div class="tagpoint am-animation-shake"></div>
+				<div class="tagicon"><a href=""><img src="images/icon/icon-cart.png"/><span>购物车</span></a></div>
+				<div class="tagpoint am-animation-shake"></div>
+			</div>
+		</div>
+		<!--footer-->
+		<footer data-am-widget="navbar" class="am-navbar am-cf footer">
+			<ul class="am-navbar-nav am-cf am-avg-sm-5">
+				<li class="flex-1">
+					<a href="" class="current">
+						<img src="images/icon/icon-home-on.png" alt="首页" />
+						<span class="am-navbar-label">首页</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-cate.png" alt="商城" />
+						<span class="am-navbar-label">商城</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="javascript:;" class="more">
+						<img src="images/icon/icon-logo-on.png" alt="" />
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-shop.png" alt="门店" />
+						<span class="am-navbar-label">门店</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-user.png" alt="个人" />
+						<span class="am-navbar-label">个人</span>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript">
+			
+			$(".more").on("click",function(){
+	        	$(".mask").fadeIn()
+	        	$(".more").find("img").attr("src","images/icon/icon-logo.png")
+	        })
+			$(".mask").on("click",function(e){
+				var target  = $(e.target);
+				if(target.closest(".tagwarp").length == 0){
+					$(".mask").fadeOut();
+					$(".more").find("img").attr("src","images/icon/icon-logo-on.png")
+				};
+				e.stopPropagation();
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<title>我的优糯</title>
+	</head>
+	<body class="page">
+		<!--header-->
+		<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+		    </div>
+		    <h1 class="am-header-title">我的优糯</h1>
+		</div>
+		<div class="ucenter">
+			<div class="author">
+				<p class="f-12 c-white">用户昵称</p>
+				<p class="f-12 c-white">女士</p>
+				<img src="images/icon/author.png"/>
+			</div>
+			<div class="ucenter-left">
+				<p class="f-16 c-666">余额：<span class="maincolor">66.0</span>元</p>
+				<p class="f-12 c-666">点击充值</p>
+			</div>
+			<div class="ucenter-line"></div>
+			<div class="ucenter-right">
+				<p class="f-16 c-666">我的付款码</p>
+			</div>
+		</div>
+		<div class="myorder card">
+			<div class="am-cf">
+				<p class="f-14 c-666 am-fl"><img src="images/icon/icon-order.png" width="16" height="16"/>我的订单</p>
+				<p class="f-12 c-999 am-fr">查看全部<img src="images/icon/icon-right.png" width="16" height="16"/></p>
+			</div>
+		</div>
+		
+		<!--mask-->
+		<div class="mask">
+			<div class="tagwarp">
+				<div class="tagpoint am-animation-shake"></div>
+				<div class="tagicon"><a href=""><img src="images/icon/icon-cart.png"/><span>购物车</span></a></div>
+				<div class="tagpoint am-animation-shake"></div>
+			</div>
+		</div>
+		<!--footer-->
+		<footer data-am-widget="navbar" class="am-navbar am-cf footer">
+			<ul class="am-navbar-nav am-cf am-avg-sm-5">
+				<li class="flex-1">
+					<a href="" class="current">
+						<img src="images/icon/icon-home-on.png" alt="首页" />
+						<span class="am-navbar-label">首页</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-cate.png" alt="商城" />
+						<span class="am-navbar-label">商城</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="javascript:;" class="more">
+						<img src="images/icon/icon-logo-on.png" alt="" />
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-shop.png" alt="门店" />
+						<span class="am-navbar-label">门店</span>
+					</a>
+				</li>
+				<li class="flex-1">
+					<a href="">
+						<img src="images/icon/icon-user.png" alt="个人" />
+						<span class="am-navbar-label">个人</span>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript">
+			
+			$(".more").on("click",function(){
+	        	$(".mask").fadeIn()
+	        	$(".more").find("img").attr("src","images/icon/icon-logo.png")
+	        })
+			$(".mask").on("click",function(e){
+				var target  = $(e.target);
+				if(target.closest(".tagwarp").length == 0){
+					$(".mask").fadeOut();
+					$(".more").find("img").attr("src","images/icon/icon-logo-on.png")
+				};
+				e.stopPropagation();
+			})
+		</script>
+	</body>
+</html>
