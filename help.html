@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<title>帮助中心</title>
+	</head>
+	<body class="fullpage">
+		<!--header-->
+		<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+		    </div>
+		    <h1 class="am-header-title">帮助中心</h1>
+		</div>
+	
+		<div class="help">
+			<div class="help-top">
+				<div class="help-search">
+					<input type="text" name="search" id="" value="" placeholder="请输入您的问题" class="search-input" />
+					<img src="images/icon/help-search.png" width="16" height="16" class="help-search-icon"/>
+				</div>
+			</div>
+			<div class="help-list">
+				<ul>
+					<li>
+						<div class="help-item">
+							<p class="f-14 c-666"><img src="images/icon/help-wen.png" width="16" height="16"/>常见问题</p>
+							<img src="images/icon/icon-up.png" width="16" height="16" />
+						</div>
+						<div class="help-collapse">
+							<p>常见问题常见问题常见问题常见问题常见问题</p>
+						</div>
+					</li>
+					<li>
+						<div class="help-item">
+							<p class="f-14 c-666"><img src="images/icon/help-cart.png" width="16" height="16"/>购物指南</p>
+							<img src="images/icon/icon-up.png" width="16" height="16" />
+						</div>
+						<div class="help-collapse">
+							<p>常见问题常见问题常见问题常见问题常见问题</p>
+						</div>
+					</li>
+					<li>
+						<div class="help-item">
+							<p class="f-14 c-666"><img src="images/icon/help-set.png" width="16" height="16"/>售后服务</p>
+							<img src="images/icon/icon-up.png" width="16" height="16" />
+						</div>
+						<div class="help-collapse">
+							<p>常见问题常见问题常见问题常见问题常见问题</p>
+						</div>
+					</li>
+					<li>
+						<div class="help-item">
+							<p class="f-14 c-666"><img src="images/icon/help-member.png" width="16" height="16"/>会员积分</p>
+							<img src="images/icon/icon-up.png" width="16" height="16" />
+						</div>
+						<div class="help-collapse">
+							<p>常见问题常见问题常见问题常见问题常见问题</p>
+						</div>
+					</li>
+					<li>
+						<div class="help-item">
+							<p class="f-14 c-666"><img src="images/icon/help-coupon.png" width="16" height="16"/>优惠卡券</p>
+							<img src="images/icon/icon-up.png" width="16" height="16" />
+						</div>
+						<div class="help-collapse">
+							<p>常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+				
+		</div>
+		<script type="text/javascript">
+			$(".help-item").each(function(){
+				$(this).on("click",function(){
+					if($(this).next().is(":hidden")){
+						$(this).next().slideDown()
+					}else{
+						$(this).next().slideUp()
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
