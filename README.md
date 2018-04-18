@@ -20,7 +20,6 @@ https://huaqhuaq.github.io/cake/invoice.html
 https://huaqhuaq.github.io/cake/join.html   
 https://huaqhuaq.github.io/cake/kill.html   
 https://huaqhuaq.github.io/cake/list.html   
-https://huaqhuaq.github.io/cake/list.txt   
 https://huaqhuaq.github.io/cake/login.html   
 https://huaqhuaq.github.io/cake/member.html  
 https://huaqhuaq.github.io/cake/order.html  
