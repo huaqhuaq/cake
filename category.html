@@ -192,7 +192,7 @@
 					$(".flymask").fadeIn()
 					setTimeout(function(){
 						$(".flymask").addClass("open")
-					})
+					},100)
 	        		$("body").addClass("lock")
 				}else{
 					$(".flymask").fadeOut().removeClass("open")
@@ -202,7 +202,7 @@
 			$(".flymask").on("click",function(e){
 				var target  = $(e.target);
 				if(target.closest(".fly").length == 0){
-					$(".flymask").fadeOut();
+					$(".flymask").fadeOut().removeClass("open");
 				};
 				$("body").removeClass("lock")
 				e.stopPropagation();

@@ -576,24 +576,25 @@ a:focus, a:hover {color: #B98E61;}
 
 /*fly*/
 .flymask{display: none;background: rgba(0,0,0,0.3);position: fixed;left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100%;z-index: 110;}
-.fly,.fly-o{display: inline-block;padding: 5px 10px;font-size: 14px;color: #fff;background: #B98E61;border-radius: 5px;position: absolute;left: auto;right: 15px;top: auto;bottom: 64px;transition: all 1s cubic-bezier(0.5, 0.1, 0.68, 1.24) 1s;}
+.fly,.fly-o{display:inline-block; padding: 5px 10px;font-size: 14px;color: #fff;background: #B98E61;border-radius: 5px;position: absolute;right: 15px;bottom: 64px;-webkit-transition: 1s cubic-bezier(0.5, 0.1, 0.68, 1.24);transition: 1s cubic-bezier(0.5, 0.1, 0.68, 1.24);}
 .fly-o{background: #fff;color: #B98E61;}
 .fly:before,.fly:after{content: "";position: absolute;bottom: -8px;left: 50%;margin-left:-10px;width: 10px;height: 10px;background: radial-gradient(20px at left bottom,transparent 50%,#B98E61 50%);}
 .fly:after{content: "";margin-left: 0;background: radial-gradient(20px at right bottom,transparent 50%,#B98E61 50%);}
 .fly-o:before,.fly-o:after{content: "";position: absolute;bottom: -8px;left: 50%;margin-left:-10px;width: 10px;height: 10px;background: radial-gradient(20px at left bottom,transparent 50%,#fff 50%);}
 .fly-o:after{content: "";margin-left: 0;background: radial-gradient(20px at right bottom,transparent 50%,#fff 50%);}
-.flymask.open .fly1{left: 40%;right: auto;top: 30%;bottom: auto;}
-.flymask.open .fly2{left: 60%;right: auto;top: 28%;bottom: auto;}
-.flymask.open .fly3{left: 80%;right: auto;top: 32%;bottom: auto;}
-.flymask.open .fly4{left: 15%;right: auto;top: 40%;bottom: auto;}
-.flymask.open .fly5{left: 42%;right: auto;top: 47%;bottom: auto;}
-.flymask.open .fly6{left: 55%;right: auto;top: 38%;bottom: auto;}
-.flymask.open .fly7{left: 20%;right: auto;top: 55%;bottom: auto;}
-.flymask.open .fly8{left: 66%;right: auto;top: 55%;bottom: auto;}
-.flymask.open .fly9{left: 18%;right: auto;top: 71%;bottom: auto;}
-.flymask.open .fly10{left: 43%;right: auto;top: 62%;bottom: auto;}
-.flymask.open .fly11{left: 68%;right: auto;top: 68%;bottom: auto;}
-.flymask.open .fly12{left: 49%;right: auto;top: 78%;bottom: auto;}
+.flymask.open .fly{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+.fly1{right: 50%;bottom: 65%;-webkit-transform: translate3d(50%,65%,0);transform: translate3d(50%,65%,0);}
+.fly2{right: 25%;bottom: 69%;-webkit-transform: translate3d(25%,69%,0);transform: translate3d(25%,69%,0);}
+.fly3{right: 4%;bottom: 63%;-webkit-transform: translate3d(4%,63%,0);transform: translate3d(4%,63%,0);}
+.fly4{right: 64%;bottom: 54%;-webkit-transform: translate3d(64%,54%,0);transform: translate3d(64%,54%,0);}
+.fly5{right: 37%;bottom: 47%;-webkit-transform: translate3d(37%,47%,0);transform: translate3d(37%,47%,0);}
+.fly6{right: 24%;bottom: 56%;-webkit-transform: translate3d(24%,56%,0);transform: translate3d(24%,56%,0);}
+.fly7{right: 63%;bottom: 40%;-webkit-transform: translate3d(63%,40%,0);transform: translate3d(63%,40%,0);}
+.fly8{right: 10%;bottom: 39%;-webkit-transform: translate3d(10%,39%,0);transform: translate3d(10%,39%,0);}
+.fly9{right: 60%;bottom: 23%;-webkit-transform: translate3d(60%,23%,0);transform: translate3d(60%,23%,0);}
+.fly10{right: 36%;bottom: 32%;-webkit-transform: translate3d(36%,32%,0);transform: translate3d(36%,32%,0);}
+.fly11{right: 11%;bottom: 26%;-webkit-transform: translate3d(11%,26%,0);transform: translate3d(11%,26%,0);}
+.fly12{right: 30%;bottom: 16%;-webkit-transform: translate3d(30%,16%,0);transform: translate3d(30%,16%,0);}
 
 
 /*==========shop==========*/
