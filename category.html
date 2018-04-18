@@ -107,8 +107,19 @@
 			<img src="images/icon/icon-cate-white.png" width="22" height="22"/>
 			<p class="f-10 c-white">分类</p>
 		</div>
-		<div class="fly">
-			
+		<div class="flymask">
+			<div class="fly fly1">销量<img src="images/icon/icon-up-white.png" width="10" height="10" /></div>
+			<div class="fly fly2">价格<img src="images/icon/icon-up-white.png" width="10" height="10" /></div>
+			<div class="fly fly3">新品<img src="images/icon/icon-up-white.png" width="10" height="10" /></div>
+			<div class="fly fly-o fly4">慕斯物语</div>
+			<div class="fly fly-o fly5">乳脂奶油</div>
+			<div class="fly fly-o fly6">乳酪狂想</div>
+			<div class="fly fly-o fly7">木糖醇</div>
+			<div class="fly fly-o fly8">燃情巧克力</div>
+			<div class="fly fly9">生日祝福</div>
+			<div class="fly fly10">派对聚会</div>
+			<div class="fly fly11">家庭团购</div>
+			<div class="fly fly12">甜蜜约会</div>
 		</div>
 		
 		<!--mask-->
@@ -174,6 +185,29 @@
 				};
 				e.stopPropagation();
 			})
+			
+			//cate
+			$(".cate").on("click",function(){
+				if($(".flymask").is(":hidden")){
+					$(".flymask").fadeIn()
+					setTimeout(function(){
+						$(".flymask").addClass("open")
+					})
+	        		$("body").addClass("lock")
+				}else{
+					$(".flymask").fadeOut().removeClass("open")
+		        	$("body").removeClass("lock")
+				}
+	        })
+			$(".flymask").on("click",function(e){
+				var target  = $(e.target);
+				if(target.closest(".fly").length == 0){
+					$(".flymask").fadeOut();
+				};
+				$("body").removeClass("lock")
+				e.stopPropagation();
+			})
+			
 		</script>
 	</body>
 </html>

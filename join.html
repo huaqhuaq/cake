@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amazeui.min.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<script src="js/city.js" type="text/javascript"></script>
+		<script src="js/picker.min.js" type="text/javascript"></script>
+		<title>加盟合作</title>
+	</head>
+	<body class="fullpage">
+		<!--header-->
+		<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+		    </div>
+		    <h1 class="am-header-title">加盟优糯</h1>
+		</div>
+		<img src="images/icon/join.png" class="am-img-responsive"/>
+		<div class="form">
+			<div class="form-group">
+				<label class="form-label sm">姓名</label>
+				<div class="form-control">
+					<input type="text" name="name" placeholder="请输入您的称呼" class="form-field">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label sm">性别</label>
+				<div class="form-control">
+					<div class="radiobox">
+						<input type="radio" name="sex" id="male" value="先生" checked="checked">
+						<label for="male">先生</label>
+					</div>
+					<div class="radiobox">
+						<input type="radio" name="sex" id="female" value="女士">
+						<label for="female">女士</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label sm">年龄</label>
+				<div class="form-control">
+					<input type="tel" name="age" placeholder="请输入您的年龄" class="form-field">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">开设地区</label>
+				<div class="form-control">
+					<p class="f-14 c-666" id="chose">请选择希望开设地区</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">详细地址</label>
+				<div class="form-control">
+					<input type="text" name="address" placeholder="请输入详细地址" class="form-field">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">合作意向</label>
+				<div class="form-control">
+					<div class="radiobox">
+						<input type="radio" name="coop" id="coop1" value="自营" checked="checked">
+						<label for="coop1">自营</label>
+					</div>
+					<div class="radiobox">
+						<input type="radio" name="coop" id="coop2" value="委托经营">
+						<label for="coop2">委托经营</label>
+					</div>
+					<div class="radiobox">
+						<input type="radio" name="coop" id="coop3" value="众筹">
+						<label for="coop3">众筹</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">联系电话</label>
+				<div class="form-control">
+					<input type="tel" name="phone" placeholder="请输入您的联系电话" class="form-field">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">意向开设时间</label>
+				<div class="form-control">
+					<input type="text" name="time" placeholder="请选择意向开设时间" data-am-datepicker="{theme: 'warning'}" class="form-field">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="form-label">营业场所属性</label>
+				<div class="form-control">
+					<div class="radiobox">
+						<input type="radio" name="attr" id="attr1" value="自由商业" checked="checked">
+						<label for="attr1">自由商业</label>
+					</div>
+					<div class="radiobox">
+						<input type="radio" name="attr" id="attr2" value="租赁商业">
+						<label for="attr2">租赁商业</label>
+					</div>
+					<div class="radiobox">
+						<input type="radio" name="attr" id="attr3" value="未知">
+						<label for="attr3">未知</label>
+					</div>
+				</div>
+			</div>
+			<input type="submit" id="" name="" value="提交申请" class="btn-main btn-block radius" />
+			<p class="f-12 c-999 am-text-center am-padding-xs">提交成功后我们将尽快与您联系</p>
+		</div>
+		<script src="js/index.js" type="text/javascript"></script>
+	</body>
+</html>

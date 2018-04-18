@@ -33,7 +33,7 @@
 				<p class="f-12 c-666">点击充值</p>
 			</div>
 			<div class="ucenter-line"></div>
-			<div class="ucenter-right">
+			<div class="ucenter-right" id="pay_code">
 				<p class="f-16 c-666">我的付款码</p>
 			</div>
 		</div>
@@ -117,7 +117,7 @@
 						</a>
 					</td>
 					<td>
-						<a href="" class="ucard">
+						<a href="javascript:;" class="ucard" id="share_code">
 							<img src="images/icon/u-share.png" class="uicon"/>
 							<p class="uname">分享奖励</p>
 						</a>
@@ -194,8 +194,31 @@
 				</li>
 			</ul>
 		</footer>
+		
 		<script type="text/javascript">
-			
+			//pay_code
+			$("#pay_code").on("click",function(){
+				layer.open({
+					type: 1,
+				    content: '<div class="am-padding-lg am-cf"><img src="images/static/pay_code.png" class="am-img-responsive" height="120" /><p class="f-14 c-666 am-text-center">XXXXXXXX</p></div>',
+				    btn: ['关闭', '刷新'],
+				    style: 'position:fixed; top: 180px; left:0;right:0;margin:0 auto; width: 300px; height: 200px; padding:0; border:none;border-radius: 5px;',
+				    className :'verify-layer',
+				    shadeClose: false
+				});
+			})
+			//share_code
+			$("#share_code").on("click",function(){
+				layer.open({
+					type: 1,
+				    content: '<div class="am-padding-lg am-cf"><div class="am-text-center"><img src="images/static/share_code.png" width="100" height="100" /></div><div class="am-g am-padding-top-xl am-text-center"> <div class="am-u-sm-5"><img src="images/icon/share-wechat.png" width="32" height="32"><p class="f-12 c-666">分享给微信好友</p></div> <div class="am-u-sm-5"><img src="images/icon/share-friends.png" width="32" height="32"><p class="f-12 c-666">分享到朋友圈</p></div> </div></div>',
+				    btn:'<img src="images/icon/icon-close.png" width="16" height="16">',
+			        anim: 'up',
+			        className:"share-layer",
+				    style: 'position:fixed; bottom: 0; left:0;right:0;margin:0 auto; width: 100%; height: 250px; padding:0; border:none;border-top-left-radius: 5px;border-top-right-radius: 5px;'
+				});
+			})
+			//more
 			$(".more").on("click",function(){
 	        	$(".mask").fadeIn()
 	        	$(".more").find("img").attr("src","images/icon/icon-logo.png")

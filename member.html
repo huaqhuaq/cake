@@ -26,24 +26,45 @@
 			<div class="member-card">
 				<p class="f-14 c-white" id="member">13001233567</p>
 			</div>
+			<div class="circle"></div>
 			<div class="circle-bg">
 				<p class="f-14 c-666 circle-font">我的积分：<span class="maincolor">9999</span></p>
-				<a href="" class="circle">点击签到</a>
+				<a href="javascript:;" class="circle-sign">点击签到</a>
 				<p class="f-14 c-666 circle-font">连续签到：<span class="maincolor">365</span>天</p>
 			</div>
 		</div>
 		<!--member-bill-->
-		<div class="member-bill">
-			
+		<div class="member-bill card">
+			<div class="container">
+				<a href=""><img src="images/icon/recharge.png" class="am-img-responsive"/></a>
+				<ul class="am-avg-sm-2 am-thumbnails">
+				    <li><img src="images/icon/rights01.png" class="am-img-responsive"/></li>
+				  	<li><img src="images/icon/rights02.png" class="am-img-responsive"/></li>
+				  	<li><img src="images/icon/rights03.png" class="am-img-responsive"/></li>
+				  	<li><img src="images/icon/rights04.png" class="am-img-responsive"/></li>
+				</ul>
+				<div class="ccc-tit">
+					<p>本月会员活动</p>
+				</div>
+				<a href=""><img src="images/static/bill01.png" class="am-img-responsive am-margin-bottom-sm"/></a>
+				<a href=""><img src="images/static/bill01.png" class="am-img-responsive am-margin-bottom-sm"/></a>
+				<div class="ccc-tit">
+					<p>积分使用活动</p>
+				</div>
+				<a href=""><img src="images/icon/lottery.png" class="am-img-responsive"/></a>
+			</div>
 		</div>
 		
 		<script type="text/javascript">
-			$(function(){
-				var member = $("#member").text()
-				var ciphertext = member.substr(4,4)
-				$("#member").text(member.replace(ciphertext,"****"))
+			var member = $("#member").text()
+			var ciphertext = member.substr(4,4)
+			$("#member").text(member.replace(ciphertext,"****"))
+			$(".circle-sign").on("click",function(){
+				layer.open({
+					content: '<img src="images/icon/sign.png" width="100%">',
+					className: 'sign-layer'
+				})
 			})
-				
 		</script>
 	</body>
 </html>
