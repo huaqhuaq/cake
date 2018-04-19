@@ -320,17 +320,10 @@ a:focus, a:hover {color: #B98E61;}
 
 
 /*============order===========*/
-.order{display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;}
-.order .hd{background: #fff;height: 40px;    flex: 0 0 40px;}
+.order .hd{background: #fff;height: 40px; }
 .order .hd ul{padding-top: 5px;}
 .order .hd ul li{width: 150px;height: 40px;background: #fff;font-size: 14px;color: #666;text-align: center;padding-top: 10px;}
 .order .hd ul li.on{color: #B98E61;background: url(../images/icon/icon-crown.png) #fff no-repeat top;background-size: 24px 13px;}
-.order .bd{overflow: scroll;
-    height: 100%;
-    flex: 1;}
 .order-field{width: 100%;padding: 10px 15px;background: #fff;margin: 6px auto;position: relative;}
 .order-field .order-group{border-bottom: none;z-index: 1;}
 .order-number{border-bottom: 1px solid #ccc;line-height: 24px;}
