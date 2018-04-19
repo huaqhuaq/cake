@@ -29,11 +29,62 @@
 			  </ul>
 			  <div class="am-tabs-bd am-tabs-bd-ofv">
 			    <div class="am-tab-panel am-active" id="all">
-			    	<div class="ticket ticket-orange">
-			    		<h4 class="f-12 c-white am-text-truncate">会员生日礼物1份</h4>
-			    		<div class="ticket-info">
-			    			<p class="f-10 c-white am-text-truncate">香芋宝盒1份</p>
-			    		</div>
+			    	<div class="container">
+			    		<div class="cardcoupon">
+			    			<img src="images/icon/coupon-orange.png" class="cardcoupon-bg" />
+				    		<div class="cardcoupon-desc">
+				    			<p class="f-16 c-white cardcoupon-name">优糯蛋糕满减券</p>
+				    			<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+				    			<p class="f-10 c-666">订单满188元使用</p>
+				    			<p class="f-10 c-666">仅限线上使用</p>
+				    		</div>
+				    		<div class="cardcoupon-amount">
+				    			<h4 class="f-32 c-white cardcoupon-count"><span class="f-18">￥</span>20</h4>
+				    			<p class="f-10 c-white">兑换码:F1J3TL</p>
+				    		</div>
+				    	</div>
+				    	<div class="cardcoupon">
+			    			<img src="images/icon/coupon-orange.png" class="cardcoupon-bg" />
+				    		<div class="cardcoupon-desc">
+				    			<p class="f-16 c-white cardcoupon-name">宝盒系列抵用券</p>
+				    			<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+				    			<p class="f-10 c-666">宝盒系列满50元使用</p>
+				    			<p class="f-10 c-666">仅限门店使用</p>
+				    			<div class="cardcoupon-limit">
+				    				<p>会员专享</p>
+				    			</div>
+				    		</div>
+				    		<div class="cardcoupon-amount">
+				    			<h4 class="f-32 c-white cardcoupon-count"><span class="f-18">￥</span>10</h4>
+				    			<p class="f-10 c-white">兑换码:F1J3TL</p>
+				    		</div>
+				    	</div>
+				    	<div class="cardcoupon">
+			    			<img src="images/icon/coupon-green.png" class="cardcoupon-bg" />
+				    		<div class="cardcoupon-desc">
+				    			<p class="f-16 c-white cardcoupon-name">优糯蛋糕升磅券</p>
+				    			<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+				    			<p class="f-10 c-666">订购大蛋糕使用</p>
+				    			<p class="f-10 c-666">仅限线上使用</p>
+				    		</div>
+				    		<div class="cardcoupon-amount">
+				    			<h4 class="f-32 c-white cardcoupon-count"><span class="f-18">+</span>1<span class="f-18">磅</span></h4>
+				    			<p class="f-10 c-white">兑换码:F1J3TL</p>
+				    		</div>
+				    	</div>
+				    	<div class="cardcoupon">
+			    			<img src="images/icon/coupon-orange.png" class="cardcoupon-bg" />
+				    		<div class="cardcoupon-desc">
+				    			<p class="f-16 c-white cardcoupon-name">幸运抽奖优惠券</p>
+				    			<p class="f-10 c-666">2017.01.03-2020.01.01</p>
+				    			<p class="f-10 c-666">消费满435元使用</p>
+				    			<p class="f-10 c-666">线上、门店通用</p>
+				    		</div>
+				    		<div class="cardcoupon-amount">
+				    			<h4 class="f-32 c-white cardcoupon-count"><span class="f-18">￥</span>70</h4>
+				    			<p class="f-10 c-white">兑换码:F1J3TL</p>
+				    		</div>
+				    	</div>
 			    	</div>
 			    </div>
 			    <div class="am-tab-panel" id="limit">.2.</div>
@@ -41,7 +92,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			$(".ticket").each(function(){
+			$(".cardcoupon").each(function(){
 				$(this).on("click",function(){
 					layer.open({
 						type: 1,
