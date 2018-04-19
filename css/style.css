@@ -279,8 +279,11 @@ a:focus, a:hover {color: #B98E61;}
 .options-size{margin-top: 10px;}
 .options-extra{overflow: scroll;height: 84px;}
 .extra-item{width: 60px;display: inline-block;margin-right: 40px;}
-.extra-pic{width: 60px;height: 60px;}
-.extra-font{font-size: 10px;color: #666;text-align: center;line-height: 24px;}
+.extra-pic{width: 60px;height: 60px;border-radius: 5px;}
+.extra-item input{display: none;}
+.extra-item label{font-size: 10px;color: #666;text-align: center;line-height: 24px;}
+.extra-item input:checked + label{color: #B98E61;}
+.extra-item input:checked + label .extra-pic{box-shadow: 0 0 0 2px #B98E61;}
 
 /*==========cart==========*/
 .cart-icon{width: 25px;height: 14px;margin: 0 2px;}
