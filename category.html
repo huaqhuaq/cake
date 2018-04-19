@@ -11,22 +11,25 @@
 		<script src="js/amazeui.min.js" type="text/javascript"></script>
 		<script src="js/swiper.min.js" type="text/javascript"></script>
 		<script src="layer/mobile/layer.js" type="text/javascript"></script>
+		<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
 		<title>商城 分类 陈列</title>
 	</head>
 	<body>
-		<div class="list-wrap">
-			<div class="am-tabs swiper-container" data-am-tabs="{noSwipe: 1}">
-				<ul class="am-tabs-nav am-nav am-nav-tabs swiper-wrapper">
-				    <li class="swiper-slide am-active"><a href="#list01">蛋糕</a></li>
-				    <li class="swiper-slide"><a href="#list02">伴手礼</a></li>
-				    <li class="swiper-slide"><a href="#list03">西点</a></li>
-				    <li class="swiper-slide"><a href="#list04">鲜花</a></li>
-				    <li class="swiper-slide"><a href="#list05">水果</a></li>
-				    <li class="swiper-slide"><a href="#list06">活动</a></li>
-				</ul>
-				<div class="am-tabs-bd am-tabs-bd-ofv">
-				    <div class="am-tab-panel am-active" id="list01">
-				    	<div class="container">
+		<div class="order">
+			<div class="hd swiper-container">
+			  <ul class="swiper-wrapper">
+			    <li class="swiper-slide">蛋糕</li>
+			    <li class="swiper-slide">伴手礼</li>
+			    <li class="swiper-slide">西点</li>
+			    <li class="swiper-slide">鲜花</li>
+			    <li class="swiper-slide">水果</li>
+			    <li class="swiper-slide">活动</li>
+			</div>
+		
+			<div class="bd">
+				<ul>
+					<li>
+						<div class="container">
 				    		<div class="am-padding-top-sm">
 				    			<p class="f-16 maincolor">乳脂奶油</p>
 				    		</div>
@@ -83,24 +86,25 @@
 				    			</div>
 				    		</div>
 				    	</div>
-				    </div>
-				    <div class="am-tab-panel" id="list02">
-				    	伴手礼
-				    </div>
-				    <div class="am-tab-panel" id="list03">
-				    	西点
-				    </div>
-				    <div class="am-tab-panel" id="list04">
-				    	鲜花
-				    </div>
-				    <div class="am-tab-panel" id="list05">
-				    	水果
-				    </div>
-				    <div class="am-tab-panel" id="list06">
-				    	活动
-				    </div>
-				</div>
+					</li>
+				</ul>
+				<ul>
+					<li>伴手礼</li>
+				</ul>
+				<ul>
+					<li>西点</li>
+				</ul>
+				<ul>
+					<li>鲜花</li>
+				</ul>
+				<ul>
+					<li>水果</li>
+				</ul>
+				<ul>
+					<li>活动</li>
+				</ul>
 			</div>
+		
 		</div>
 		<!--fly-->
 		<div class="cate">
@@ -208,6 +212,13 @@
 				e.stopPropagation();
 			})
 			
+			var mySwiper = new Swiper('.order .hd', {
+				slidesPerView :'auto' ,
+				resistanceRatio : 0,
+				observer:true,
+				observeParents:true
+			})
+			jQuery(".order").slide({trigger:"click"});
 		</script>
 	</body>
 </html>

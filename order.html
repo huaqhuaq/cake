@@ -212,11 +212,12 @@
 		</div>
 
 		<script type="text/javascript">
-			var mySwiper = new Swiper('.swiper-container', {
+			var mySwiper = new Swiper('.order .hd', {
 				slidesPerView :'auto' ,
-				resistanceRatio : 0
+				resistanceRatio : 0,
+				observer:true,
+				observeParents:true
 			})
-			
 			jQuery(".order").slide({trigger:"click"});
 		</script>
 	</body>
