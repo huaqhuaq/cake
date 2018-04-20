@@ -22,7 +22,7 @@
 			<!--header-->
 			<div class="header am-header am-header-default am-header-fixed" data-am-widget="header">
 				<div class="am-header-left am-header-nav">
-					<a href="javascript:history.go(-1)"><img src="images/icon/icon-left.png" width="20" height="20"></a>
+					<a href="javascript:;" id="back"><img src="images/icon/icon-left.png" width="20" height="20"></a>
 			    </div>
 			    <h1 class="am-header-title">选择优惠</h1>
 			</div>
@@ -117,6 +117,12 @@
 		
 		
 		<script type="text/javascript">
+			
+			$("#back").on("click",function(){
+				console.log(parent.$("#myEle").html())	
+				//$(".iframe",parent.document).removeClass("show")
+			})
+			
 			$(".coupon-item.disabled").each(function(){
 				$(this).on("click",function(){
 					$(this).removeClass("active")

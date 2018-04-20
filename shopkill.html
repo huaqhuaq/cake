@@ -211,6 +211,7 @@
 			<div class="shop-total-cart" id="cart">
 				<img src="images/icon/icon-cart.png"/>
 				<span class="shop-total-num badge">2</span>
+				<div class="ball"><div class="inner"></div></div>
 			</div>
 			<div class="shop-total-price">
 				<p class="f-14 maincolor"><span class="f-12">￥</span>822</p>
@@ -233,29 +234,37 @@
 			})
 			
 			$(".kill-buy").each(function(){
-				$(this).on("click",function(){
-					layer.open({
-						type: 1,
-						content:'<div class="seckill-item"> <img src="images/static/bing.png" class="seckill-pic"/> <div class="seckill-info"> <div> <p class="seckill-name">优糯Q饼<span class="seckill-count">5枚装</span></p> <p class="seckill-en">UNUO Cake</p> <div class="btn-main-outline btn-sm radius">仅限百盛店自提</div> </div> <div class="seckill-price-wrap"> <div> <p class="seckill-ori">原价:¥88</p> <p class="maincolor seckill-price-num"><span class="f-12">￥</span>66</p> </div> <div class="amount"> <a class="btn-reduce" href="javascript:;" onclick="setAmount.reduce(\'#buy-num\')">-</a> <input class="text" id="buy-num" value="1" onkeyup="setAmount.modify(\'#buy-num\');"> <a class="btn-add" href="javascript:;" onclick="setAmount.add(\'#buy-num\')">+</a> </div> </div> </div> </div> <a href="" class="btn-main btn-block radius">立即抢购</a>',
-						style: 'position: absolute;top: 150px;left: 0;right:0;width: 280px;border-radius: 5px;margin:0 auto; padding: 15px;border:none;'
-					})
-				})
+//				$(this).on("click",function(){
+//					layer.open({
+//						type: 1,
+//						content:'<div class="seckill-item"> <img src="images/static/bing.png" class="seckill-pic"/> <div class="seckill-info"> <div> <p class="seckill-name">优糯Q饼<span class="seckill-count">5枚装</span></p> <p class="seckill-en">UNUO Cake</p> <div class="btn-main-outline btn-sm radius">仅限百盛店自提</div> </div> <div class="seckill-price-wrap"> <div> <p class="seckill-ori">原价:¥88</p> <p class="maincolor seckill-price-num"><span class="f-12">￥</span>66</p> </div> <div class="amount"> <a class="btn-reduce" href="javascript:;" onclick="setAmount.reduce(\'#buy-num\')">-</a> <input class="text" id="buy-num" value="1" onkeyup="setAmount.modify(\'#buy-num\');"> <a class="btn-add" href="javascript:;" onclick="setAmount.add(\'#buy-num\')">+</a> </div> </div> </div> </div> <a href="" class="btn-main btn-block radius">立即抢购</a>',
+//						style: 'position: absolute;top: 150px;left: 0;right:0;width: 280px;border-radius: 5px;margin:0 auto; padding: 15px;border:none;'
+//					})
+//				})
 			})
 			
+			var cartTop = $(".shop-total-num").offset().top,
+				cartLeft = $(".shop-total-num").offset().left
 			$(".am-tab-panel").each(function(){
 				$(this).scroll(function(){
-					var panelTop = $(this).scrollTop()
 					$(".kill-buy").each(function(){
 						var killTop = $(this).offset().top,
 							killLeft = $(this).offset().left,
-							index = $(".kill-buy").index(this)+1
-						console.log('killTop:'+killTop+',panelTop:'+panelTop+","+index+'='+(killTop-panelTop))
-						//console.log(killTop-panelTop-244)
+						scrollX = killLeft - cartLeft,
+						scrollY = cartTop - killTop,
+						ball = $(".ball")
+						
+						ball.css({"-webkit-transform":"translate3d("+(-scrollX)+"px,0,0)","transform":"translate3d("+(-scrollX)+"px,0,0)"})
+       					ball.find(".inner").css({"-webkit-transform":"translate3d(0,"+(-scrollY)+"px,0)","transform":"translate3d(0,"+(-scrollY)+"px,0)"})
+						$(this).on("click",function(){
+       						ball.css({"-webkit-transform":"translate3d(0,0,0)","transform":"translate3d(0,0,0)"})
+       						ball.find(".inner").css({"-webkit-transform":"translate3d(0,0,0)","transform":"translate3d(0,0,0)"})
+       					 })
 					})
 				})
 			})
 			
-			//console.log($(".shop-total-num").offset())
+
 			
 			var setAmount={
 				min:1,
