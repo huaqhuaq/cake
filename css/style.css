@@ -68,7 +68,7 @@ a:focus, a:hover {color: #B98E61;}
 .checkbox input:checked + label,.radiobox input:checked + label{background: url(../images/icon/icon-checked.png) no-repeat left;background-size: 16px 16px;}
 .checkbox input:disabled + label,.radiobox input:disabled + label{background: url(../images/icon/icon-disabled.png) no-repeat left;background-size: 16px 16px;color: #666;}
 
-.radiobtn{display: inline-block;margin: 5px;}
+.radiobtn{display: inline-block;margin: 5px 10px 5px 0;}
 .radiobtn input[type="radio"]{display: none;}
 .radiobtn label{padding: 0 10px;height: 24px;border-radius: 5px;background: #fff;border: 1px solid #B98E61;font-size: 14px;color: #B98E61;text-align: center;line-height: 24px;}
 .radiobtn input:checked + label{background: #B98E61;color: #fff;}
@@ -169,7 +169,7 @@ a:focus, a:hover {color: #B98E61;}
 .seckill-info{padding: 0 10px;-webkit-box-flex: 1;-ms-flex: 1;flex: 1;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
 .seckill-info-top{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;}
 .seckill-name{font-size: 14px;color: #666;line-height: 16px;}
-.seckill-count{font-size: 12px;color: #666;line-height: 12px;}
+.seckill-count{font-size: 10px;color: #666;line-height: 12px;margin-left: 2px;}
 .seckill-en{font-size: 10px;color: #999;line-height: 12px;}
 .seckill-left{font-size: 12px;color: #666;}
 .seckill-ori{font-size: 10px;color: #999;text-decoration: line-through;line-height: 12px;}
@@ -272,13 +272,14 @@ a:focus, a:hover {color: #B98E61;}
 .options-layer.layui-m-layerchild .layui-m-layerbtn{position: absolute; right: 0; top: 0; width: 50px; height: 50px; background: transparent;border: none;}
 .options-layer.layui-m-layerchild .layui-m-layerbtn span:active{background: transparent;}
 .options{overflow:scroll;padding: 0 30px;}
-.options-cake{height: 160px;padding-bottom: 10px;border-bottom: 1px solid #B98E61;position: relative;}
+.options-cake{height: 158px;padding-bottom: 10px;border-bottom: 1px solid #B98E61;position: relative;}
 .options-cake-pic{width: 110px;height: 100px;position: absolute;top: 0;right: 20px;display: table-cell;text-align: center;vertical-align: middle;}
 .options-cake-pic img{width: 100%;max-width: 100%;max-height: 100%;}
 .options-cake-info{position: absolute;left: 0;top: 20px;}
 .options-size{margin-top: 10px;}
-.options-extra{overflow: scroll;height: 84px;}
-.extra-item{width: 60px;display: inline-block;margin-right: 40px;}
+.options-extra{overflow-y: hidden;overflow-x: scroll;width: 100%; height: 84px;}
+.options-wrap{height: 84px;}
+.extra-item{float: left;width: 60px;display: inline-block;margin-right: 40px;}
 .extra-pic{width: 60px;height: 60px;border-radius: 5px;}
 .extra-item input{display: none;}
 .extra-item label{font-size: 10px;color: #666;text-align: center;line-height: 24px;}
@@ -374,7 +375,8 @@ a:focus, a:hover {color: #B98E61;}
 
 /*kill-item*/
 .kill-item{width: 100%;padding: 0 15px;background: #fff;border-radius: 5px;box-shadow: 0 2px 5px 2px #ccc;margin-bottom: 15px;}
-.kill-title{border-bottom: 1px solid #ccc;height: 36px;line-height: 36px;margin-bottom: 15px;}
+.kill-title{border-bottom: 1px solid #ccc;height: 36px;line-height: 36px;}
+.kill-item .seckill-item{padding-top: 15px;}
 .seckill-price-wrap{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
 
 /*==========confirm==========*/
@@ -621,7 +623,6 @@ a:focus, a:hover {color: #B98E61;}
 .shopcart{width: 100%;position: absolute;left: 0;bottom: 50px;border-top-left-radius: 5px;border-top-right-radius: 5px;background: #fff;padding: 0 15px;border-bottom: 1px solid #ccc;}
 .shopcart-tit{width: 100%;height: 49px;border-bottom: 1px solid #ccc;line-height: 49px;}
 .shopcart-item{position: relative;padding: 10px 0;}
-.shopcart-pri{position: absolute;right: 100px;}
 
 /*==========service==========*/
 .service-item{display: block;width: 100%;height: 60px;border-radius: 5px;background: #fff;border: 1px solid #B98E61;color: #B98E61;text-align: center;line-height: 16px;padding: 12px 0;margin: 15px auto;}
@@ -731,17 +732,13 @@ a:focus, a:hover {color: #B98E61;}
 .cardcoupon-limit{width: 38px;height: 88px;background: url(../images/icon/coupon-flag.png) no-repeat center;background-size: 38px 88px;position: absolute;left: 52%;top: 7%;}
 .cardcoupon-limit p{font-size: 12px;color: #fff;line-height: 14px;width: 12px;margin: 6px auto 0;}
 
-
-
-.iframe{-webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); -webkit-transition: -webkit-transform .2s cubic-bezier(0,0,.25,1); transition: transform .2s cubic-bezier(0,0,.25,1); position: fixed;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;z-index: 9999;}
-.iframe.show{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
-
-
-
-
-
-
-
+/*modify*/
+.am-selected{width: auto;}
+.am-selected .am-btn-default{border: none;}
+.am-selected-list li.am-checked .am-icon-check{color: #B98E61;}
+.fullwrap{background: #ddd; padding-top: 44px; position: fixed; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0); transition: -webkit-transform .2s cubic-bezier(0,0,.25,1); transition: transform .2s cubic-bezier(0,0,.25,1); transition: transform .2s cubic-bezier(0,0,.25,1), -webkit-transform .2s cubic-bezier(0,0,.25,1);}
+.fullwrap.show{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+.actionfooter{height: 44px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
 
 
 
